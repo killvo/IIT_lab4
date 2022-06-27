@@ -18,15 +18,14 @@ public final class HelloWorldBot extends Bot {
         super(token, botName);
     }
 
-//    @Override
-//    protected void processTheException(Exception e) {
-//        e.printStackTrace();
-//        System.out.println(e.toString());
-//    }
-//
-//    @Override
-//    public void onUpdateReceived(Update update) {
-//        System.out.println("Hello world from bot!");
-//        sendTextMessage(update.getMessage(), "Hello world from bot!");
-//    }
+    @Override
+    protected void processTheException(Exception e) {
+        e.printStackTrace();
+        System.out.println(e.toString());
+    }
+
+    @Override
+    public void onUpdateReceived(Update update) {
+        sendTextMessage(update.getMessage(), "Hello world from bot!");
+    }
 }
